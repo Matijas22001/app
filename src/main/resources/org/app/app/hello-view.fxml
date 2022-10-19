@@ -1,16 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.app.app.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.app.HelloController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/02_1_Tryb%20program_.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="35.0" prefWidth="1024.0">
+         <children>
+            <ImageView fitHeight="22.0" fitWidth="97.64" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Group%2073.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="42.0" layoutX="130.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Frame.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="84.0" layoutX="198.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Group%2072.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="130.0" layoutX="780.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/TRYB%20RĘCZNY.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="924.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/wifi.png" />
+               </image></ImageView>
+            <ImageView fitHeight="22.0" fitWidth="49.0" layoutX="969.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/10_20.png" />
+               </image></ImageView>
+         </children></AnchorPane>
+      <ImageView fitHeight="544.0" fitWidth="64.0" layoutY="55.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/Subtract.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="811.0" layoutX="104.0" layoutY="420.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/button.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="52.78" pickOnBounds="true" preserveRatio="true" />
+      <BorderPane layoutY="52.0" prefHeight="548.0" prefWidth="272.0">
+         <left>
+            <VBox prefHeight="548.0" prefWidth="272.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="57.7" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Frame%2043.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="16.0" left="6.0" top="6.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="96.0" fitWidth="57.7" layoutX="3.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Frame%2039.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="16.0" left="3.0" right="3.3" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="96.0" fitWidth="57.7" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Frame%2040.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="16.0" left="3.0" right="3.3" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="96.0" fitWidth="57.7" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Frame%2041.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="16.0" left="3.0" right="3.3" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="96.0" fitWidth="57.7" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/Frame%2042.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="3.0" right="3.3" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+      <ImageView fitHeight="96.0" fitWidth="8.0" layoutY="60.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/Rectangle%20118.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="280.0" fitWidth="880.0" layoutX="104.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Rectangle%20266.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="272.0" fitWidth="225.0" layoutX="566.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Rectangle%20128.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="272.0" fitWidth="225.0" layoutX="337.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Rectangle%2091.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="272.0" fitWidth="225.0" layoutX="108.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Rectangle%20156.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="88.0" fitWidth="185.0" layoutX="795.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Rectangle%2085.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="88.0" fitWidth="185.0" layoutX="795.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Rectangle%20129.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="88.0" fitWidth="185.0" layoutX="795.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Rectangle%20157.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="224.0" layoutX="108.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/+_Bar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="225.0" layoutX="108.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/-_Bar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/+_Hz.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="225.0" layoutX="566.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/+_Uderzenia.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/-_Hz.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="64.0" fitWidth="225.0" layoutX="566.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/-_Uderzenia.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="51.0" fitWidth="62.0" layoutX="823.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/TRANSMITER.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="65.38" layoutX="896.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/15%20mm.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="131.0" layoutX="823.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Line%2010.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="14.0" fitWidth="123.0" layoutX="826.0" layoutY="335.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/Group%209621.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="120.0" layoutX="830.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Tryb%20ciągły.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="120.0" layoutX="830.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Ruch%20liniowy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="516.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/DALEJ.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="52.78" layoutX="931.0" layoutY="416.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/Group%2044.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="942.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Group%209619.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="108.0" layoutX="195.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Bar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="108.0" layoutX="425.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Hz.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="108.0" layoutX="627.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Uderzeń.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.14" fitWidth="32.14" layoutX="814.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Group%209630.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.86" fitWidth="26.79" layoutX="870.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Group%209629.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="210.0" layoutX="118.0" layoutY="516.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/Suma%20uderzeń.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exitButton" fitHeight="56.0" fitWidth="56.0" layoutX="931.0" layoutY="516.0" onMouseClicked="#closeButtonAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/WYLACZ.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="880.0" layoutX="380.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Ustaw%20parametry%20zabiegu.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
