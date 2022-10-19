@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.app.HelloController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView disable="true" fitHeight="600.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/02_1_Tryb%20program_.png" />
          </image>
@@ -56,9 +58,9 @@
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="52.78" pickOnBounds="true" preserveRatio="true" />
-      <BorderPane layoutY="52.0" prefHeight="548.0" prefWidth="272.0">
+      <BorderPane layoutY="52.0" prefHeight="548.0" prefWidth="96.0">
          <left>
-            <VBox prefHeight="548.0" prefWidth="272.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="548.0" prefWidth="96.0" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fitHeight="96.0" fitWidth="57.7" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -129,6 +131,20 @@
             <Image url="@../../../images/Rectangle%20156.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="iv_border_1" fitHeight="308.0" fitWidth="254.0" layoutX="94.0" layoutY="110.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../../../images/Rectangle%20267.png" />
+         </image></ImageView>
+      <ImageView fx:id="iv_border_2" fitHeight="308.0" fitWidth="260.0" layoutX="316.0" layoutY="110.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../../../images/Rectangle%20267(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iv_border_3" fitHeight="308.0" fitWidth="254.0" layoutX="549.0" layoutY="111.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../../../images/Rectangle%20267(2).png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="88.0" fitWidth="185.0" layoutX="795.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/Rectangle%2085.png" />
@@ -144,32 +160,32 @@
             <Image url="@../../../images/Rectangle%20157.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="224.0" layoutX="108.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="add_bar_btn" fitHeight="64.0" fitWidth="224.0" layoutX="108.0" layoutY="124.0" onMouseClicked="#add_bar_value" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/+_Bar.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="225.0" layoutX="108.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sub_bar_btn" fitHeight="64.0" fitWidth="225.0" layoutX="108.0" layoutY="332.0" onMouseClicked="#sub_bar_value" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/-_Bar.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="add_hz_btn" fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="124.0" onMouseClicked="#add_hz_value" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/+_Hz.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="225.0" layoutX="566.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="add_hit_btn" fitHeight="64.0" fitWidth="225.0" layoutX="566.0" layoutY="124.0" onMouseClicked="#add_hit_value" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/+_Uderzenia.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sub_hz_btn" fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="332.0" onMouseClicked="#sub_hz_value" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/-_Hz.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="64.0" fitWidth="225.0" layoutX="566.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sub_hit_btn" fitHeight="64.0" fitWidth="225.0" layoutX="566.0" layoutY="332.0" onMouseClicked="#sub_hit_value" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/-_Uderzenia.png" />
          </image>
@@ -194,16 +210,6 @@
             <Image url="@../../../images/Group%209621.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="120.0" layoutX="830.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/Tryb%20ciągły.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="120.0" layoutX="830.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/Ruch%20liniowy.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="516.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/DALEJ.png" />
@@ -219,21 +225,16 @@
             <Image url="@../../../images/Group%209619.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="22.0" fitWidth="108.0" layoutX="195.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/Bar.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="22.0" fitWidth="108.0" layoutX="425.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/Hz.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="22.0" fitWidth="108.0" layoutX="627.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/Uderzeń.png" />
-         </image>
-      </ImageView>
+      <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="349.0" layoutY="266.0" mouseTransparent="true" prefHeight="64.0" prefWidth="200.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Hz">
+         <font>
+            <Font name="DejaVu Sans Bold" size="36.0" />
+         </font>
+      </TextField>
+      <TextField editable="false" focusTraversable="false" layoutX="574.0" layoutY="266.0" mouseTransparent="true" prefHeight="68.0" prefWidth="210.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Uderzeń">
+         <font>
+            <Font name="DejaVu Sans Bold" size="36.0" />
+         </font>
+      </TextField>
       <ImageView fitHeight="32.14" fitWidth="32.14" layoutX="814.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/Group%209630.png" />
@@ -244,20 +245,55 @@
             <Image url="@../../../images/Group%209629.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="210.0" layoutX="118.0" layoutY="516.0" pickOnBounds="true">
-         <image>
-            <Image url="@../../../images/Suma%20uderzeń.png" />
-         </image>
-      </ImageView>
+      <TextField editable="false" focusTraversable="false" layoutX="104.0" layoutY="504.0" minHeight="30.0" mouseTransparent="true" prefWidth="300.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Suma uderzeń">
+         <font>
+            <Font name="DejaVu Sans Bold" size="25.0" />
+         </font>
+      </TextField>
       <ImageView fx:id="exitButton" fitHeight="56.0" fitWidth="56.0" layoutX="931.0" layoutY="516.0" onMouseClicked="#closeButtonAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/WYLACZ.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="22.0" fitWidth="880.0" layoutX="380.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/Ustaw%20parametry%20zabiegu.png" />
-         </image>
-      </ImageView>
+      <TextField fx:id="bar_tv" alignment="CENTER" editable="false" focusTraversable="false" layoutX="119.0" layoutY="189.0" mouseTransparent="true" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="2.0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="50.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="hz_tv" alignment="CENTER" editable="false" focusTraversable="false" layoutX="350.0" layoutY="189.0" mouseTransparent="true" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="10">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="hit_tv" alignment="CENTER" editable="false" focusTraversable="false" layoutX="579.0" layoutY="189.0" mouseTransparent="true" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="2000">
+         <font>
+            <Font name="DejaVu Sans Bold" size="50.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="sum_hit_tv" editable="false" focusTraversable="false" layoutX="104.0" layoutY="536.0" mouseTransparent="true" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="2000">
+         <font>
+            <Font name="DejaVu Sans Bold" size="26.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="119.0" layoutY="266.0" mouseTransparent="true" prefHeight="64.0" prefWidth="200.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Bar">
+         <font>
+            <Font name="DejaVu Sans Bold" size="36.0" />
+         </font>
+      </TextField>
+      <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="204.0" layoutY="60.0" minHeight="30.0" mouseTransparent="true" prefWidth="612.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Ustaw parametry zabiegu">
+         <font>
+            <Font name="DejaVu Sans Bold" size="25.0" />
+         </font>
+      </TextField>
+      <TextField editable="false" focusTraversable="false" layoutX="821.0" layoutY="260.0" minHeight="30.0" mouseTransparent="true" prefHeight="33.0" prefWidth="139.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Tryb ciągły">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField editable="false" focusTraversable="false" layoutX="812.0" layoutY="352.0" minHeight="30.0" mouseTransparent="true" prefHeight="33.0" prefWidth="151.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Ruch liniowy">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>
