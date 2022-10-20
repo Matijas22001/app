@@ -62,14 +62,10 @@ public class HelloController {
 
     @FXML
     public void setOnTouchListener(){
-        add_hz_btn.addEventHandler(MouseEvent.MOUSE_CLICKED, touchEvent -> System.out.println("MOUSE_CLICKED"));
-        add_hz_btn.addEventHandler(MouseEvent.MOUSE_PRESSED, touchEvent -> System.out.println("MOUSE_PRESSED"));
-        add_hz_btn.addEventHandler(MouseEvent.MOUSE_RELEASED, touchEvent -> System.out.println("MOUSE_RELEASED"));
-        add_hz_btn.addEventHandler(MouseEvent.MOUSE_ENTERED, touchEvent -> System.out.println("MOUSE_ENTERED"));
-        add_hz_btn.addEventHandler(TouchEvent.TOUCH_PRESSED, touchEvent -> System.out.println("TOUCH_PRESSED"));
-        add_hz_btn.addEventHandler(TouchEvent.TOUCH_RELEASED, touchEvent -> System.out.println("TOUCH_RELEASED"));
-        add_hz_btn.addEventHandler(TouchEvent.TOUCH_STATIONARY, touchEvent -> System.out.println("TOUCH_STATIONARY"));
-        add_hz_btn.addEventHandler(TouchEvent.TOUCH_MOVED, touchEvent -> System.out.println("TOUCH_MOVED"));
+        //add_hz_btn.addEventHandler(MouseEvent.MOUSE_CLICKED, touchEvent -> System.out.println("MOUSE_CLICKED"));
+        //add_hz_btn.addEventHandler(MouseEvent.MOUSE_PRESSED, touchEvent -> System.out.println("MOUSE_PRESSED"));
+        //add_hz_btn.addEventHandler(MouseEvent.MOUSE_RELEASED, touchEvent -> System.out.println("MOUSE_RELEASED"));
+        //add_hz_btn.addEventHandler(MouseEvent.MOUSE_ENTERED, touchEvent -> System.out.println("MOUSE_ENTERED"));
     }
 
     @FXML
@@ -86,6 +82,7 @@ public class HelloController {
 
     @FXML
     private void add_hz_value(){
+        System.out.println("AddHZButton");
         iv_border_1.setVisible(false);
         iv_border_2.setVisible(true);
         iv_border_3.setVisible(false);
