@@ -171,7 +171,7 @@
             <Image url="@../../../images/-_Bar.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="add_hz_btn" fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="124.0" onMouseClicked="#add_hz_value" onTouchPressed="#add_bar_value" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="add_hz_btn" fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="124.0" onMouseClicked="#add_hz_value" onMouseEntered="#add_hz_value" onTouchPressed="#add_bar_value" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/+_Hz.png" />
          </image>
