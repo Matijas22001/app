@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.input.TouchEvent;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -37,9 +38,10 @@ public class HelloController {
     @FXML private TextField hz_tv;
     @FXML private TextField hit_tv;
     @FXML private TextField sum_hit_tv;
-
     @FXML
     private TextField time_tv;
+
+    private boolean wasMoveLast = true;
 
     @FXML
     public void initClock(){
@@ -62,80 +64,117 @@ public class HelloController {
 
     @FXML
     public void setOnTouchListener(){
-        //add_hz_btn.addEventHandler(MouseEvent.MOUSE_CLICKED, touchEvent -> System.out.println("MOUSE_CLICKED"));
-        //add_hz_btn.addEventHandler(MouseEvent.MOUSE_PRESSED, touchEvent -> System.out.println("MOUSE_PRESSED"));
-        //add_hz_btn.addEventHandler(MouseEvent.MOUSE_RELEASED, touchEvent -> System.out.println("MOUSE_RELEASED"));
-        //add_hz_btn.addEventHandler(MouseEvent.MOUSE_ENTERED, touchEvent -> System.out.println("MOUSE_ENTERED"));
+        add_hz_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
+            wasMoveLast = true;
+        });
+        add_hit_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
+            wasMoveLast = true;
+        });
+        add_bar_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
+            wasMoveLast = true;
+        });
+        sub_hz_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
+            wasMoveLast = true;
+        });
+        sub_hit_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
+            wasMoveLast = true;
+        });
+        sub_bar_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
+            wasMoveLast = true;
+        });
     }
 
     @FXML
     private void add_bar_value(){
-        iv_border_1.setVisible(true);
-        iv_border_2.setVisible(false);
-        iv_border_3.setVisible(false);
-        double barValue = Double.parseDouble(bar_tv.getText());
-        DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
-        if(barValue<6){
-            bar_tv.setText(String.valueOf(df.format(barValue+0.1)));
+        if(wasMoveLast){
+            wasMoveLast = false;
+        }else{
+            iv_border_1.setVisible(true);
+            iv_border_2.setVisible(false);
+            iv_border_3.setVisible(false);
+            double barValue = Double.parseDouble(bar_tv.getText());
+            DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
+            if(barValue<6){
+                bar_tv.setText(String.valueOf(df.format(barValue+0.1)));
+            }
         }
     }
 
     @FXML
     private void add_hz_value(){
-        System.out.println("AddHZButton");
-        iv_border_1.setVisible(false);
-        iv_border_2.setVisible(true);
-        iv_border_3.setVisible(false);
-        int hzValue = Integer.parseInt(hz_tv.getText());
-        if(hzValue<20){
-            hz_tv.setText(String.valueOf(hzValue+1));
+        if(wasMoveLast){
+            wasMoveLast = false;
+        }else{
+            iv_border_1.setVisible(false);
+            iv_border_2.setVisible(true);
+            iv_border_3.setVisible(false);
+            int hzValue = Integer.parseInt(hz_tv.getText());
+            if(hzValue<20){
+                hz_tv.setText(String.valueOf(hzValue+1));
+            }
         }
     }
 
     @FXML
     private void add_hit_value(){
-        iv_border_1.setVisible(false);
-        iv_border_2.setVisible(false);
-        iv_border_3.setVisible(true);
-        int hitValue = Integer.parseInt(hit_tv.getText());
-        if(hitValue<3000){
-            hit_tv.setText(String.valueOf(hitValue+100));
-            sum_hit_tv.setText(String.valueOf(hitValue+100));
+        if(wasMoveLast){
+            wasMoveLast = false;
+        }else{
+            iv_border_1.setVisible(false);
+            iv_border_2.setVisible(false);
+            iv_border_3.setVisible(true);
+            int hitValue = Integer.parseInt(hit_tv.getText());
+            if(hitValue<3000){
+                hit_tv.setText(String.valueOf(hitValue+100));
+                sum_hit_tv.setText(String.valueOf(hitValue+100));
+            }
         }
     }
 
     @FXML
     private void sub_bar_value(){
-        iv_border_1.setVisible(true);
-        iv_border_2.setVisible(false);
-        iv_border_3.setVisible(false);
-        double barValue = Double.parseDouble(bar_tv.getText());
-        DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
-        if(barValue>0){
-            bar_tv.setText(String.valueOf(df.format(barValue-0.1)));
+        if(wasMoveLast){
+            wasMoveLast = false;
+        }else{
+            iv_border_1.setVisible(true);
+            iv_border_2.setVisible(false);
+            iv_border_3.setVisible(false);
+            double barValue = Double.parseDouble(bar_tv.getText());
+            DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
+            if(barValue>0){
+                bar_tv.setText(String.valueOf(df.format(barValue-0.1)));
+            }
         }
     }
 
     @FXML
     private void sub_hz_value(){
-        iv_border_1.setVisible(false);
-        iv_border_2.setVisible(true);
-        iv_border_3.setVisible(false);
-        int hzValue = Integer.parseInt(hz_tv.getText());
-        if(hzValue>0){
-            hz_tv.setText(String.valueOf(hzValue-1));
+        if(wasMoveLast){
+            wasMoveLast = false;
+        }else{
+            iv_border_1.setVisible(false);
+            iv_border_2.setVisible(true);
+            iv_border_3.setVisible(false);
+            int hzValue = Integer.parseInt(hz_tv.getText());
+            if(hzValue>0){
+                hz_tv.setText(String.valueOf(hzValue-1));
+            }
         }
     }
 
     @FXML
     private void sub_hit_value(){
-        iv_border_1.setVisible(false);
-        iv_border_2.setVisible(false);
-        iv_border_3.setVisible(true);
-        int hitValue = Integer.parseInt(hit_tv.getText());
-        if(hitValue>0){
-            hit_tv.setText(String.valueOf(hitValue-100));
-            sum_hit_tv.setText(String.valueOf(hitValue-100));
+        if(wasMoveLast){
+            wasMoveLast = false;
+        }else{
+            iv_border_1.setVisible(false);
+            iv_border_2.setVisible(false);
+            iv_border_3.setVisible(true);
+            int hitValue = Integer.parseInt(hit_tv.getText());
+            if(hitValue>0){
+                hit_tv.setText(String.valueOf(hitValue-100));
+                sum_hit_tv.setText(String.valueOf(hitValue-100));
+            }
         }
     }
 }
