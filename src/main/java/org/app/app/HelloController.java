@@ -65,30 +65,48 @@ public class HelloController {
     @FXML
     public void setOnTouchListener(){
         add_hz_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            wasMoveLast = true;
+            System.out.println("MOUSE_MOVED");
         });
         add_hit_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            wasMoveLast = true;
+            System.out.println("MOUSE_MOVED");
         });
         add_bar_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            wasMoveLast = true;
+            System.out.println("MOUSE_MOVED");
         });
         sub_hz_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            wasMoveLast = true;
+            System.out.println("MOUSE_MOVED");
         });
         sub_hit_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            wasMoveLast = true;
+            System.out.println("MOUSE_MOVED");
         });
         sub_bar_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            wasMoveLast = true;
+            System.out.println("MOUSE_MOVED");
+        });
+        add_hz_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
+            System.out.println("MOUSE_DRAGGED");
+        });
+        add_hit_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
+            System.out.println("MOUSE_DRAGGED");
+        });
+        add_bar_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
+            System.out.println("MOUSE_DRAGGED");
+        });
+        sub_hz_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
+            System.out.println("MOUSE_DRAGGED");
+        });
+        sub_hit_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
+            System.out.println("MOUSE_DRAGGED");
+        });
+        sub_bar_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
+            System.out.println("MOUSE_DRAGGED");
         });
     }
 
     @FXML
     private void add_bar_value(){
-        if(wasMoveLast){
-            wasMoveLast = false;
-        }else{
+        //if(wasMoveLast){
+        //    wasMoveLast = false;
+        //}else{
             iv_border_1.setVisible(true);
             iv_border_2.setVisible(false);
             iv_border_3.setVisible(false);
@@ -97,14 +115,14 @@ public class HelloController {
             if(barValue<6){
                 bar_tv.setText(String.valueOf(df.format(barValue+0.1)));
             }
-        }
+        //}
     }
 
     @FXML
     private void add_hz_value(){
-        if(wasMoveLast){
-            wasMoveLast = false;
-        }else{
+        //if(wasMoveLast){
+        //    wasMoveLast = false;
+        //}else{
             iv_border_1.setVisible(false);
             iv_border_2.setVisible(true);
             iv_border_3.setVisible(false);
@@ -112,14 +130,14 @@ public class HelloController {
             if(hzValue<20){
                 hz_tv.setText(String.valueOf(hzValue+1));
             }
-        }
+        //}
     }
 
     @FXML
     private void add_hit_value(){
-        if(wasMoveLast){
-            wasMoveLast = false;
-        }else{
+        //if(wasMoveLast){
+        //    wasMoveLast = false;
+        //}else{
             iv_border_1.setVisible(false);
             iv_border_2.setVisible(false);
             iv_border_3.setVisible(true);
@@ -128,14 +146,14 @@ public class HelloController {
                 hit_tv.setText(String.valueOf(hitValue+100));
                 sum_hit_tv.setText(String.valueOf(hitValue+100));
             }
-        }
+        //}
     }
 
     @FXML
     private void sub_bar_value(){
-        if(wasMoveLast){
-            wasMoveLast = false;
-        }else{
+        //if(wasMoveLast){
+        //    wasMoveLast = false;
+        //}else{
             iv_border_1.setVisible(true);
             iv_border_2.setVisible(false);
             iv_border_3.setVisible(false);
@@ -144,14 +162,14 @@ public class HelloController {
             if(barValue>0){
                 bar_tv.setText(String.valueOf(df.format(barValue-0.1)));
             }
-        }
+        //}
     }
 
     @FXML
     private void sub_hz_value(){
-        if(wasMoveLast){
-            wasMoveLast = false;
-        }else{
+        //if(wasMoveLast){
+        //    wasMoveLast = false;
+        //}else{
             iv_border_1.setVisible(false);
             iv_border_2.setVisible(true);
             iv_border_3.setVisible(false);
@@ -159,14 +177,14 @@ public class HelloController {
             if(hzValue>0){
                 hz_tv.setText(String.valueOf(hzValue-1));
             }
-        }
+        //}
     }
 
     @FXML
     private void sub_hit_value(){
-        if(wasMoveLast){
-            wasMoveLast = false;
-        }else{
+        //if(wasMoveLast){
+        //    wasMoveLast = false;
+        //}else{
             iv_border_1.setVisible(false);
             iv_border_2.setVisible(false);
             iv_border_3.setVisible(true);
@@ -175,6 +193,6 @@ public class HelloController {
                 hit_tv.setText(String.valueOf(hitValue-100));
                 sum_hit_tv.setText(String.valueOf(hitValue-100));
             }
-        }
+        //}
     }
 }
