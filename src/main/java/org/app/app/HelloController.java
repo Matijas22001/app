@@ -1,13 +1,23 @@
 package org.app.app;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TouchEvent;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
+import java.io.Console;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class HelloController {
@@ -29,11 +39,37 @@ public class HelloController {
     @FXML private TextField sum_hit_tv;
 
     @FXML
+    private TextField time_tv;
+
+    @FXML
+    public void initClock(){
+        Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e ->
+                time_tv.setText(LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")))
+        ),
+                new KeyFrame(Duration.seconds(1))
+        );
+        clock.setCycleCount(Animation.INDEFINITE);
+        clock.play();
+    }
+
+    @FXML
     private void closeButtonAction(){
         // get a handle to the stage
         Stage stage = (Stage) exitButton.getScene().getWindow();
         // do what you have to do
         stage.close();
+    }
+
+    @FXML
+    public void setOnTouchListener(){
+        add_hz_btn.addEventHandler(MouseEvent.MOUSE_CLICKED, touchEvent -> System.out.println("MOUSE_CLICKED"));
+        add_hz_btn.addEventHandler(MouseEvent.MOUSE_PRESSED, touchEvent -> System.out.println("MOUSE_PRESSED"));
+        add_hz_btn.addEventHandler(MouseEvent.MOUSE_RELEASED, touchEvent -> System.out.println("MOUSE_RELEASED"));
+        add_hz_btn.addEventHandler(MouseEvent.MOUSE_ENTERED, touchEvent -> System.out.println("MOUSE_ENTERED"));
+        add_hz_btn.addEventHandler(TouchEvent.TOUCH_PRESSED, touchEvent -> System.out.println("TOUCH_PRESSED"));
+        add_hz_btn.addEventHandler(TouchEvent.TOUCH_RELEASED, touchEvent -> System.out.println("TOUCH_RELEASED"));
+        add_hz_btn.addEventHandler(TouchEvent.TOUCH_STATIONARY, touchEvent -> System.out.println("TOUCH_STATIONARY"));
+        add_hz_btn.addEventHandler(TouchEvent.TOUCH_MOVED, touchEvent -> System.out.println("TOUCH_MOVED"));
     }
 
     @FXML

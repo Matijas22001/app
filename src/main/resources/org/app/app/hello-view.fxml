@@ -33,19 +33,20 @@
                   <Image url="@../../../images/Group%2072.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="20.0" fitWidth="130.0" layoutX="780.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/TRYB%20RĘCZNY.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="924.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="62.0" layoutX="909.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/wifi.png" />
                </image></ImageView>
-            <ImageView fitHeight="22.0" fitWidth="49.0" layoutX="969.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/10_20.png" />
-               </image></ImageView>
+            <TextField fx:id="time_tv" alignment="TOP_LEFT" editable="false" focusTraversable="false" layoutX="939.0" layoutY="1.0" mouseTransparent="true" prefHeight="33.0" prefWidth="84.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="10:20">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField alignment="TOP_LEFT" editable="false" focusTraversable="false" layoutX="743.0" layoutY="2.0" mouseTransparent="true" prefHeight="33.0" prefWidth="166.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="TRYB RĘCZNY">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="18.0" />
+               </font>
+            </TextField>
          </children></AnchorPane>
       <ImageView fitHeight="544.0" fitWidth="64.0" layoutY="55.0" pickOnBounds="true">
          <image>
