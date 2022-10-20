@@ -7,6 +7,8 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 
 public class HelloController {
     @FXML private ImageView exitButton;
@@ -40,7 +42,7 @@ public class HelloController {
         iv_border_2.setVisible(false);
         iv_border_3.setVisible(false);
         double barValue = Double.parseDouble(bar_tv.getText());
-        DecimalFormat df = new DecimalFormat("#.#");
+        DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
         if(barValue<6){
             bar_tv.setText(String.valueOf(df.format(barValue+0.1)));
         }
@@ -75,7 +77,7 @@ public class HelloController {
         iv_border_2.setVisible(false);
         iv_border_3.setVisible(false);
         double barValue = Double.parseDouble(bar_tv.getText());
-        DecimalFormat df = new DecimalFormat("#.#");
+        DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
         if(barValue>0){
             bar_tv.setText(String.valueOf(df.format(barValue-0.1)));
         }
