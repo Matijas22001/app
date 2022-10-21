@@ -3,18 +3,17 @@ package org.app.app;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
-import javafx.scene.input.TouchEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.Console;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.time.LocalDateTime;
@@ -29,11 +28,12 @@ public class HelloController {
     @FXML private ImageView sub_bar_btn;
     @FXML private ImageView sub_hz_btn;
     @FXML private ImageView sub_hit_btn;
-
+    @FXML private AnchorPane bar_scroll_ap;
+    @FXML private AnchorPane hz_scroll_ap;
+    @FXML private AnchorPane hit_scroll_ap;
     @FXML private ImageView iv_border_1;
     @FXML private ImageView iv_border_2;
     @FXML private ImageView iv_border_3;
-
     @FXML private TextField bar_tv;
     @FXML private TextField hz_tv;
     @FXML private TextField hit_tv;
@@ -64,41 +64,17 @@ public class HelloController {
 
     @FXML
     public void setOnTouchListener(){
-        add_hz_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
+        bar_scroll_ap.addEventHandler(MouseEvent.MOUSE_CLICKED, touchEvent -> {
+            System.out.println("MOUSE_CLICKED-bar_scroll_ap");
         });
-        add_hit_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
+        add_bar_btn.addEventHandler(MouseEvent.MOUSE_CLICKED, touchEvent -> {
+            System.out.println("MOUSE_CLICKED-add_bar_btn");
         });
-        add_bar_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
-        });
-        sub_hz_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
-        });
-        sub_hit_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
-        });
-        sub_bar_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
-        });
-        add_hz_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
-        });
-        add_hit_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
+        bar_scroll_ap.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
+            System.out.println("MOUSE_DRAGGED-bar_scroll_ap");
         });
         add_bar_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
-        });
-        sub_hz_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
-        });
-        sub_hit_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
-        });
-        sub_bar_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
+            System.out.println("MOUSE_DRAGGED-add_bar_btn");
         });
     }
 
