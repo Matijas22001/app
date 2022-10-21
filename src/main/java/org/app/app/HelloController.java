@@ -60,28 +60,6 @@ public class HelloController {
     }
 
     @FXML
-    public void setOnTouchListener(){
-        bar_scroll_ap.addEventHandler(MouseEvent.MOUSE_CLICKED, touchEvent -> System.out.println("MOUSE_CLICKED-bar_scroll_ap"));
-        add_bar_btn.addEventHandler(MouseEvent.MOUSE_CLICKED, touchEvent -> System.out.println("MOUSE_CLICKED-add_bar_btn"));
-        bar_scroll_ap.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> System.out.println("MOUSE_MOVED-bar_scroll_ap"));
-        add_bar_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> System.out.println("MOUSE_MOVED-add_bar_btn"));
-        bar_scroll_ap.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> System.out.println("MOUSE_DRAGGED-bar_scroll_ap"));
-        add_bar_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> System.out.println("MOUSE_DRAGGED-add_bar_btn"));
-        bar_scroll_ap.addEventHandler(TouchEvent.TOUCH_PRESSED, touchEvent -> System.out.println("TOUCH_PRESSED-bar_scroll_ap"));
-        add_bar_btn.addEventHandler(TouchEvent.TOUCH_PRESSED, touchEvent -> System.out.println("TOUCH_PRESSED-add_bar_btn"));
-        bar_scroll_ap.addEventHandler(TouchEvent.TOUCH_RELEASED, touchEvent -> System.out.println("TOUCH_RELEASED-bar_scroll_ap"));
-        add_bar_btn.addEventHandler(TouchEvent.TOUCH_RELEASED, touchEvent -> System.out.println("TOUCH_RELEASED-add_bar_btn"));
-        bar_scroll_ap.addEventHandler(MouseEvent.MOUSE_PRESSED, touchEvent -> System.out.println("MOUSE_PRESSED-bar_scroll_ap"));
-        add_bar_btn.addEventHandler(MouseEvent.MOUSE_PRESSED, touchEvent -> System.out.println("MOUSE_PRESSED-add_bar_btn"));
-        bar_scroll_ap.addEventHandler(MouseEvent.MOUSE_RELEASED, touchEvent -> System.out.println("MOUSE_RELEASED-bar_scroll_ap"));
-        add_bar_btn.addEventHandler(MouseEvent.MOUSE_RELEASED, touchEvent -> System.out.println("MOUSE_RELEASED-add_bar_btn"));
-        bar_scroll_ap.addEventHandler(TouchEvent.TOUCH_STATIONARY, touchEvent -> System.out.println("TOUCH_STATIONARY-bar_scroll_ap"));
-        add_bar_btn.addEventHandler(TouchEvent.TOUCH_STATIONARY, touchEvent -> System.out.println("TOUCH_STATIONARY-add_bar_btn"));
-        bar_scroll_ap.addEventHandler(TouchEvent.TOUCH_MOVED, touchEvent -> System.out.println("TOUCH_MOVED-bar_scroll_ap"));
-        add_bar_btn.addEventHandler(TouchEvent.TOUCH_MOVED, touchEvent -> System.out.println("TOUCH_MOVED-add_bar_btn"));
-    }
-
-    @FXML
     private void add_bar_value(){
         //if(wasMoveLast){
         //    wasMoveLast = false;
