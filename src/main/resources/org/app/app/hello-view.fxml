@@ -139,7 +139,7 @@
                   <Image url="@../../../images/Rectangle%20156.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="add_bar_btn" fitHeight="64.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="add_bar_btn" fitHeight="64.0" fitWidth="224.0" onMouseClicked="#add_bar_value_sequence" onMouseExited="#set_increment_status_false" onMouseMoved="#add_bar_value" onMousePressed="#set_increment_status_true" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/+_Bar.png" />
                </image>
@@ -154,7 +154,7 @@
                   <Font name="DejaVu Sans Bold" size="36.0" />
                </font>
             </TextField>
-            <ImageView fx:id="sub_bar_btn" fitHeight="64.0" fitWidth="225.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="sub_bar_btn" fitHeight="64.0" fitWidth="225.0" layoutY="208.0" onMouseClicked="#sub_bar_value_sequence" onMouseExited="#set_decrement_status_false" onMouseMoved="#sub_bar_value" onMousePressed="#set_decrement_status_true" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/-_Bar.png" />
                </image>

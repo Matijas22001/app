@@ -38,7 +38,8 @@ public class HelloController {
     @FXML
     private TextField time_tv;
 
-    private boolean wasMoveLast = true;
+    private boolean isIncrementingBarRunning = false;
+    private boolean isDecrementingBarRunning = false;
 
     @FXML
     public void initClock(){
@@ -50,6 +51,27 @@ public class HelloController {
         clock.setCycleCount(Animation.INDEFINITE);
         clock.play();
     }
+
+    @FXML
+    private void set_increment_status_true(){
+        isIncrementingBarRunning = true;
+    }
+
+    @FXML
+    private void set_decrement_status_true(){
+        isDecrementingBarRunning = true;
+    }
+
+    @FXML
+    private void set_increment_status_false(){
+        isIncrementingBarRunning = false;
+    }
+
+    @FXML
+    private void set_decrement_status_false(){
+        isDecrementingBarRunning = false;
+    }
+
 
     @FXML
     private void closeButtonAction(){
@@ -73,6 +95,36 @@ public class HelloController {
                 bar_tv.setText(String.valueOf(df.format(barValue+0.1)));
             }
         //}
+    }
+
+    @FXML
+    private void add_bar_value_sequence() throws InterruptedException {
+        while(isIncrementingBarRunning){
+            iv_border_1.setVisible(true);
+            iv_border_2.setVisible(false);
+            iv_border_3.setVisible(false);
+            double barValue = Double.parseDouble(bar_tv.getText());
+            DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
+            if(barValue<6){
+                bar_tv.setText(String.valueOf(df.format(barValue+0.1)));
+            }
+            Thread.sleep(1000);
+        }
+    }
+
+    @FXML
+    private void sub_bar_value_sequence() throws InterruptedException {
+        while(isDecrementingBarRunning){
+            iv_border_1.setVisible(true);
+            iv_border_2.setVisible(false);
+            iv_border_3.setVisible(false);
+            double barValue = Double.parseDouble(bar_tv.getText());
+            DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
+            if(barValue>0){
+                bar_tv.setText(String.valueOf(df.format(barValue-0.1)));
+            }
+            Thread.sleep(1000);
+        }
     }
 
     @FXML
