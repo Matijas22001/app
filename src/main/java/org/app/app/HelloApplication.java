@@ -1,6 +1,7 @@
 package org.app.app;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
@@ -16,8 +17,8 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        scene.addEventFilter(TouchEvent.ANY, System.out::println);
-        scene.addEventFilter(MouseEvent.ANY, System.out::println);
+        //scene.addEventFilter(TouchEvent.ANY, System.out::println);
+        scene.addEventFilter(MouseEvent.ANY, e -> System.out.println(e.getEventType()));
         stage.setMaximized(true);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
