@@ -3,6 +3,7 @@ package org.app.app;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -41,7 +42,7 @@ public class HelloController {
     @FXML
     private TextField time_tv;
 
-    private boolean wasMoveLast = true;
+    private Timeline watcher_timeline;
 
     @FXML
     public void initClock(){
@@ -63,59 +64,65 @@ public class HelloController {
     }
 
     @FXML
-    public void setOnTouchListener(){
-        add_hz_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
-        });
-        add_hit_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
-        });
-        add_bar_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
-        });
-        sub_hz_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
-        });
-        sub_hit_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
-        });
-        sub_bar_btn.addEventHandler(MouseEvent.MOUSE_MOVED, touchEvent -> {
-            System.out.println("MOUSE_MOVED");
-        });
-        add_hz_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
-        });
-        add_hit_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
-        });
-        add_bar_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
-        });
-        sub_hz_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
-        });
-        sub_hit_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
-        });
-        sub_bar_btn.addEventHandler(MouseEvent.MOUSE_DRAGGED, touchEvent -> {
-            System.out.println("MOUSE_DRAGGED");
-        });
+    private void add_bar_value(){
+        System.out.println("Added from onetime");
+        iv_border_1.setVisible(true);
+        iv_border_2.setVisible(false);
+        iv_border_3.setVisible(false);
+        double barValue = Double.parseDouble(bar_tv.getText());
+        DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
+        if(barValue<6){
+            bar_tv.setText(String.valueOf(df.format(barValue+0.1)));
+        }
     }
 
     @FXML
-    private void add_bar_value(){
-        //if(wasMoveLast){
-        //    wasMoveLast = false;
-        //}else{
-            iv_border_1.setVisible(true);
-            iv_border_2.setVisible(false);
-            iv_border_3.setVisible(false);
-            double barValue = Double.parseDouble(bar_tv.getText());
-            DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
-            if(barValue<6){
-                bar_tv.setText(String.valueOf(df.format(barValue+0.1)));
-            }
-        //}
+    private void stopWatcher(){
+        if(watcher_timeline != null){
+            watcher_timeline.stop();
+            watcher_timeline = null;
+        }
+    }
+
+    @FXML
+    private void add_bar_value_sequence() {
+        add_bar_btn.addEventHandler(MouseEvent.MOUSE_EXITED_TARGET, mouseEvent -> stopWatcher());
+        if(watcher_timeline == null){
+            watcher_timeline = new Timeline(new KeyFrame(Duration.seconds(0.5), actionEvent -> {
+                System.out.println("Added from sequence");
+                iv_border_1.setVisible(true);
+                iv_border_2.setVisible(false);
+                iv_border_3.setVisible(false);
+                double barValue = Double.parseDouble(bar_tv.getText());
+                DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
+                if(barValue<6){
+                    bar_tv.setText(String.valueOf(df.format(barValue+0.1)));
+                }
+            })
+            );
+            watcher_timeline.setCycleCount(Timeline.INDEFINITE);
+            watcher_timeline.play();
+        }
+    }
+
+    @FXML
+    private void sub_bar_value_sequence() {
+        add_bar_btn.addEventHandler(MouseEvent.MOUSE_EXITED_TARGET, mouseEvent -> stopWatcher());
+        if(watcher_timeline == null){
+            watcher_timeline = new Timeline(new KeyFrame(Duration.seconds(0.5), actionEvent -> {
+                iv_border_1.setVisible(true);
+                iv_border_2.setVisible(false);
+                iv_border_3.setVisible(false);
+                double barValue = Double.parseDouble(bar_tv.getText());
+                DecimalFormat df = new DecimalFormat("#.#", DecimalFormatSymbols.getInstance(Locale.US));
+                if(barValue>0){
+                    bar_tv.setText(String.valueOf(df.format(barValue-0.1)));
+                }
+            })
+            );
+            watcher_timeline.setCycleCount(Timeline.INDEFINITE);
+            watcher_timeline.play();
+        }
     }
 
     @FXML
