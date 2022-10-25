@@ -161,32 +161,32 @@
             <Image url="@../../../images/Rectangle%20157.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="add_bar_btn" fitHeight="64.0" fitWidth="224.0" layoutX="108.0" layoutY="124.0" onMouseClicked="#add_bar_value_sequence" onMouseEntered="#add_bar_value" onMouseExited="#stopWatcher" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="add_bar_btn" fitHeight="64.0" fitWidth="224.0" layoutX="108.0" layoutY="124.0" onMouseEntered="#add_bar_value" onMouseExited="#stopWatcher" onMousePressed="#add_bar_value_sequence" onMouseReleased="#stopWatcher" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/+_Bar.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="sub_bar_btn" fitHeight="64.0" fitWidth="225.0" layoutX="108.0" layoutY="332.0" onMouseClicked="#sub_bar_value_sequence" onMouseEntered="#sub_bar_value" onMouseExited="#stopWatcher" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sub_bar_btn" fitHeight="64.0" fitWidth="225.0" layoutX="108.0" layoutY="332.0" onMouseEntered="#sub_bar_value" onMouseExited="#stopWatcher" onMousePressed="#sub_bar_value_sequence" onMouseReleased="#stopWatcher" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/-_Bar.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="add_hz_btn" fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="124.0" onMouseClicked="#add_hz_value_sequence" onMouseEntered="#add_hz_value" onMouseExited="#stopWatcher" onTouchPressed="#add_bar_value" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="add_hz_btn" fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="124.0" onMouseEntered="#add_hz_value" onMouseExited="#stopWatcher" onMousePressed="#add_hz_value_sequence" onMouseReleased="#stopWatcher" onTouchPressed="#add_bar_value" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/+_Hz.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="add_hit_btn" fitHeight="64.0" fitWidth="225.0" layoutX="566.0" layoutY="124.0" onMouseClicked="#add_hit_value_sequence" onMouseEntered="#add_hit_value" onMouseExited="#stopWatcher" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="add_hit_btn" fitHeight="64.0" fitWidth="225.0" layoutX="566.0" layoutY="124.0" onMouseEntered="#add_hit_value" onMouseExited="#stopWatcher" onMousePressed="#add_hit_value_sequence" onMouseReleased="#stopWatcher" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/+_Uderzenia.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="sub_hz_btn" fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="332.0" onMouseClicked="#sub_hz_value_sequence" onMouseEntered="#sub_hz_value" onMouseExited="#stopWatcher" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sub_hz_btn" fitHeight="64.0" fitWidth="225.0" layoutX="337.0" layoutY="332.0" onMouseEntered="#sub_hz_value" onMouseExited="#stopWatcher" onMousePressed="#sub_hz_value_sequence" onMouseReleased="#stopWatcher" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/-_Hz.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="sub_hit_btn" fitHeight="64.0" fitWidth="225.0" layoutX="566.0" layoutY="332.0" onMouseClicked="#sub_hit_value_sequence" onMouseEntered="#sub_hit_value" onMouseExited="#stopWatcher" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sub_hit_btn" fitHeight="64.0" fitWidth="225.0" layoutX="566.0" layoutY="332.0" onMouseEntered="#sub_hit_value" onMouseExited="#stopWatcher" onMousePressed="#sub_hit_value_sequence" onMouseReleased="#stopWatcher" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/-_Uderzenia.png" />
          </image>
@@ -251,7 +251,7 @@
             <Font name="DejaVu Sans Bold" size="25.0" />
          </font>
       </TextField>
-      <ImageView fx:id="exitButton" fitHeight="56.0" fitWidth="56.0" layoutX="931.0" layoutY="516.0" onMouseClicked="#closeButtonAction" onTouchPressed="#closeButtonAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="exitButton" fitHeight="56.0" fitWidth="56.0" layoutX="931.0" layoutY="516.0" onMouseClicked="#closeButtonAction" onMouseEntered="#closeButtonAction" onMouseReleased="#closeButtonAction" onTouchPressed="#closeButtonAction" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/WYLACZ.png" />
          </image>

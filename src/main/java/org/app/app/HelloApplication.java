@@ -19,9 +19,9 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setMaximized(true);
         stage.initStyle(StageStyle.UNDECORATED);
-        scene.addEventFilter(MouseEvent.ANY, e -> System.out.println(e.getEventType()));
-        scene.addEventFilter(MouseDragEvent.ANY, e -> System.out.println(e.getEventType()));
-        scene.addEventFilter(DragEvent.ANY, e -> System.out.println(e.getEventType()));
+        //scene.addEventFilter(MouseEvent.ANY, e -> System.out.println(e.getEventType()));
+        //scene.addEventFilter(MouseDragEvent.ANY, e -> System.out.println(e.getEventType()));
+        //scene.addEventFilter(DragEvent.ANY, e -> System.out.println(e.getEventType()));
         stage.setScene(scene);
         HelloController ctrl = fxmlLoader.getController();
         ctrl.initClock();
