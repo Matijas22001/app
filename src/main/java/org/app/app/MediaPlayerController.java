@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -36,10 +37,26 @@ public class MediaPlayerController {
     private MediaView media_view;
     @FXML
     private TextField time_tv;
+    @FXML
+    private Button startButton;
+    @FXML
+    private Button stopButton;
+    @FXML
+    private Button restartButton;
 
-    private static final String MEDIA_URL = "/videos/Video1.mp4";
-
-
+    private MediaPlayer mediaPlayer;
+    @FXML
+    private void play_media_player(){
+        mediaPlayer.play();
+    }
+    @FXML
+    private void play_stop_player(){
+        mediaPlayer.pause();
+    }
+    @FXML
+    private void play_restart_player(){
+        mediaPlayer.stop();
+    }
     public void switch_to_main_scene(){
         accept_button.addEventHandler(MouseEvent.MOUSE_ENTERED_TARGET, mouseEvent -> {
             loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
@@ -71,13 +88,12 @@ public class MediaPlayerController {
     @FXML
     public void start_playing_video(){
         Media media = new Media(getClass().getResource("/videos/Video1conv.mp4").toExternalForm());
-        MediaPlayer mediaPlayer = null;
+        mediaPlayer = null;
         try{
             mediaPlayer = new MediaPlayer(media);
         }catch(Exception e){
             e.printStackTrace();
         }
-        mediaPlayer.setAutoPlay(true);
         media_view.setMediaPlayer(mediaPlayer);
     }
 }
