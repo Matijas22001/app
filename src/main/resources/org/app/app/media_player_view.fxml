@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.app.MediaPlayerController">
+    <children>
+        <ImageView fx:id="accept_changes" disable="true" fitHeight="600.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/02_1_Tryb%20program_.png" />
+            </image>
+        </ImageView>
+        <AnchorPane prefHeight="35.0" prefWidth="1024.0">
+            <children>
+                <ImageView fitHeight="22.0" fitWidth="97.64" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/Group%2073.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="42.0" layoutX="130.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/Frame.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="22.0" fitWidth="84.0" layoutX="198.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/Group%2072.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="62.0" layoutX="909.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/wifi.png" />
+                    </image></ImageView>
+                <TextField fx:id="time_tv" alignment="TOP_LEFT" editable="false" focusTraversable="false" layoutX="939.0" layoutY="1.0" mouseTransparent="true" prefHeight="33.0" prefWidth="84.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="10:20">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="18.0" />
+                    </font>
+                </TextField>
+                <TextField alignment="TOP_LEFT" editable="false" focusTraversable="false" layoutX="743.0" layoutY="2.0" mouseTransparent="true" prefHeight="33.0" prefWidth="166.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="TRYB RĘCZNY">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="18.0" />
+                    </font>
+                </TextField>
+            </children></AnchorPane>
+        <ImageView fitHeight="544.0" fitWidth="64.0" layoutY="55.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Subtract.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="150.0" fitWidth="52.78" pickOnBounds="true" preserveRatio="true" />
+        <BorderPane layoutY="52.0" prefHeight="548.0" prefWidth="96.0">
+            <left>
+                <VBox prefHeight="548.0" prefWidth="96.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="96.0" fitWidth="57.7" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Frame%2043.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="6.0" top="6.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="96.0" fitWidth="57.7" layoutX="3.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Frame%2039.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="3.0" right="3.3" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="96.0" fitWidth="57.7" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Frame%2040.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="3.0" right="3.3" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="96.0" fitWidth="57.7" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Frame%2041.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="3.0" right="3.3" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="96.0" fitWidth="57.7" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Frame%2042.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets left="3.0" right="3.3" />
+                            </VBox.margin>
+                        </ImageView>
+                    </children>
+                </VBox>
+            </left>
+        </BorderPane>
+        <ImageView fitHeight="96.0" fitWidth="8.0" layoutY="60.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Rectangle%20118.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="accept_button" fitHeight="56.0" fitWidth="56.0" layoutX="931.0" layoutY="516.0" onMouseClicked="#switch_to_main_scene" onMouseEntered="#switch_to_main_scene" onMouseReleased="#switch_to_main_scene" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/AKCEPTUJ.png" />
+            </image>
+        </ImageView>
+        <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="204.0" layoutY="60.0" minHeight="30.0" mouseTransparent="true" prefWidth="612.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Wybierz transmiter">
+            <font>
+                <Font name="DejaVu Sans Bold" size="25.0" />
+            </font>
+        </TextField>
+      <MediaView fx:id="media_view" fitHeight="400.0" fitWidth="600.0" layoutX="212.0" layoutY="127.0" onMouseExited="#start_playing_video" />
+    </children>
+</AnchorPane>

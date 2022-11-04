@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.app.app.ChooserScenesController">
+    <children>
+        <ImageView fx:id="accept_changes" disable="true" fitHeight="600.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/02_1_Tryb%20program_.png" />
+            </image>
+        </ImageView>
+        <AnchorPane prefHeight="35.0" prefWidth="1024.0">
+            <children>
+                <ImageView fitHeight="22.0" fitWidth="97.64" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/Group%2073.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="21.0" fitWidth="42.0" layoutX="130.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/Frame.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="22.0" fitWidth="84.0" layoutX="198.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/Group%2072.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="62.0" layoutX="909.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images/wifi.png" />
+                    </image></ImageView>
+                <TextField fx:id="time_tv" alignment="TOP_LEFT" editable="false" focusTraversable="false" layoutX="939.0" layoutY="1.0" mouseTransparent="true" prefHeight="33.0" prefWidth="84.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="10:20">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="18.0" />
+                    </font>
+                </TextField>
+                <TextField alignment="TOP_LEFT" editable="false" focusTraversable="false" layoutX="743.0" layoutY="2.0" mouseTransparent="true" prefHeight="33.0" prefWidth="166.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="TRYB RĘCZNY">
+                    <font>
+                        <Font name="DejaVu Sans Bold" size="18.0" />
+                    </font>
+                </TextField>
+            </children></AnchorPane>
+        <ImageView fitHeight="544.0" fitWidth="64.0" layoutY="55.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Subtract.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="150.0" fitWidth="52.78" pickOnBounds="true" preserveRatio="true" />
+        <BorderPane layoutY="52.0" prefHeight="548.0" prefWidth="96.0">
+            <left>
+                <VBox prefHeight="548.0" prefWidth="96.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="96.0" fitWidth="57.7" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Frame%2043.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="6.0" top="6.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="96.0" fitWidth="57.7" layoutX="3.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Frame%2039.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="3.0" right="3.3" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="96.0" fitWidth="57.7" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Frame%2040.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="3.0" right="3.3" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="96.0" fitWidth="57.7" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Frame%2041.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="3.0" right="3.3" />
+                            </VBox.margin>
+                        </ImageView>
+                        <ImageView fitHeight="96.0" fitWidth="57.7" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/Frame%2042.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets left="3.0" right="3.3" />
+                            </VBox.margin>
+                        </ImageView>
+                    </children>
+                </VBox>
+            </left>
+        </BorderPane>
+        <ImageView fitHeight="96.0" fitWidth="8.0" layoutY="60.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Rectangle%20118.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="accept_button" fitHeight="56.0" fitWidth="56.0" layoutX="931.0" layoutY="516.0" onMouseClicked="#switch_to_main_scene" onMouseEntered="#switch_to_main_scene" onMouseReleased="#switch_to_main_scene" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../images/AKCEPTUJ.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="deactive_continuous" fitHeight="96.0" fitWidth="220.5" layoutX="104.0" layoutY="122.0" onMouseEntered="#activate_mode_continuous" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Rectangle%20267(3).png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="mode_continuous_active" fitHeight="93.0" fitWidth="220.5" layoutX="104.0" layoutY="124.0" onMouseEntered="#activate_mode_continuous" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Rectangle%20182.png" />
+            </image>
+        </ImageView>
+      <ImageView fx:id="continuous_icon" fitWidth="131.0" layoutX="150.0" layoutY="156.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/continuous_black.png" />
+         </image>
+      </ImageView>
+        <ImageView fx:id="deactive_burst" fitHeight="96.0" fitWidth="220.5" layoutX="325.0" layoutY="122.0" onMouseEntered="#activate_mode_burst" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Rectangle%20181.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="mode_burst_active" fitHeight="93.0" fitWidth="220.5" layoutX="325.0" layoutY="124.0" onMouseEntered="#activate_mode_burst" pickOnBounds="true" visible="false">
+            <image>
+                <Image url="@../../../images/middle_chosen_panel.png" />
+            </image>
+        </ImageView>
+      <ImageView fx:id="burst_icon" fitWidth="131.0" layoutX="371.0" layoutY="151.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/burst_white.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="deactive_dimmer" fitHeight="96.0" fitWidth="220.5" layoutX="546.0" layoutY="122.0" onMouseEntered="#activate_mode_dimmer" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/Rectangle%20181.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mode_dimmer_active" fitHeight="93.0" fitWidth="220.5" layoutX="546.0" layoutY="124.0" onMouseEntered="#activate_mode_dimmer" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../../../images/middle_chosen_panel.png" />
+         </image>
+      </ImageView>
+        <ImageView fx:id="deactive_swing" fitHeight="96.0" fitWidth="220.5" layoutX="767.0" layoutY="122.0" onMouseEntered="#activate_mode_swing" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Rectangle%20180.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="mode_swing_active" fitHeight="94.0" fitWidth="220.5" layoutX="765.0" layoutY="124.0" onMouseEntered="#activate_mode_swing" pickOnBounds="true" visible="false">
+            <image>
+                <Image url="@../../../images/left_chosen_panel.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="254.0" fitWidth="882.0" layoutX="104.0" layoutY="216.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../images/Rectangle%20191.png" />
+            </image>
+        </ImageView>
+        <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="204.0" layoutY="60.0" minHeight="30.0" mouseTransparent="true" prefWidth="612.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Wybierz transmiter">
+            <font>
+                <Font name="DejaVu Sans Bold" size="25.0" />
+            </font>
+        </TextField>
+      <ImageView fx:id="dimmer_icon" fitWidth="131.0" layoutX="596.0" layoutY="148.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/dimmer_white.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="swing_icon" fitWidth="131.0" layoutX="811.0" layoutY="146.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../images/swing_white.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="continuous_text" alignment="CENTER" editable="false" focusTraversable="false" layoutX="146.0" layoutY="174.0" minHeight="30.0" mouseTransparent="true" prefHeight="33.0" prefWidth="139.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #121420;" text="Ciągły">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="burst_text" alignment="CENTER" editable="false" focusTraversable="false" layoutX="367.0" layoutY="174.0" minHeight="30.0" mouseTransparent="true" prefHeight="33.0" prefWidth="139.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Burst">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="dimmer_text" alignment="CENTER" editable="false" focusTraversable="false" layoutX="592.0" layoutY="174.0" minHeight="30.0" mouseTransparent="true" prefHeight="33.0" prefWidth="139.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Dimmer">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="swing_text" alignment="CENTER" editable="false" focusTraversable="false" layoutX="808.0" layoutY="174.0" minHeight="30.0" mouseTransparent="true" prefHeight="33.0" prefWidth="139.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Swing">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </TextField>
+    </children>
+</AnchorPane>
