@@ -475,7 +475,6 @@ public class HelloController {
             stage.setScene(scene);
             MediaPlayerController ctrl = loader.getController();
             ctrl.initClock();
-            //ctrl.start_playing_video();
             //ctrl.initViewMode(currentChoice, currentModeChoice, currentMoveChoice, current_bar_value, current_hz_value, current_hit_value);
             stage.show();
         });

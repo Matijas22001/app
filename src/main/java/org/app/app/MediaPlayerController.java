@@ -5,6 +5,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -24,9 +25,10 @@ import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 
-public class MediaPlayerController {
+public class MediaPlayerController implements Initializable {
     private Stage stage;
     private Scene scene;
     private FXMLLoader loader;
@@ -45,6 +47,19 @@ public class MediaPlayerController {
     private Button restartButton;
 
     private MediaPlayer mediaPlayer;
+    private Media media;
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1){
+        media = new Media(getClass().getResource("/videos/Video1.mp4").toExternalForm());
+        mediaPlayer = null;
+        try{
+            mediaPlayer = new MediaPlayer(media);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        media_view.setMediaPlayer(mediaPlayer);
+    }
     @FXML
     private void play_media_player(){
         mediaPlayer.play();
@@ -83,17 +98,5 @@ public class MediaPlayerController {
         );
         clock.setCycleCount(Animation.INDEFINITE);
         clock.play();
-    }
-
-    @FXML
-    public void start_playing_video(){
-        Media media = new Media(getClass().getResource("/videos/Video1conv.mp4").toExternalForm());
-        mediaPlayer = null;
-        try{
-            mediaPlayer = new MediaPlayer(media);
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-        media_view.setMediaPlayer(mediaPlayer);
     }
 }

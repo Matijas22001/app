@@ -114,12 +114,12 @@
                 <Image url="@../../../images/AKCEPTUJ.png" />
             </image>
         </ImageView>
-        <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="204.0" layoutY="60.0" minHeight="30.0" mouseTransparent="true" prefWidth="612.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Wybierz transmiter">
+        <TextField alignment="CENTER" editable="false" focusTraversable="false" layoutX="204.0" layoutY="37.0" minHeight="30.0" mouseTransparent="true" prefWidth="612.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Wybierz transmiter">
             <font>
                 <Font name="DejaVu Sans Bold" size="25.0" />
             </font>
         </TextField>
-      <MediaView fx:id="media_view" fitHeight="400.0" fitWidth="600.0" layoutX="212.0" layoutY="100.0" onMouseExited="#start_playing_video" />
+      <MediaView fx:id="media_view" fitHeight="400.0" fitWidth="600.0" layoutX="212.0" layoutY="100.0" />
       <Button fx:id="startButton" layoutX="212.0" layoutY="527.0" mnemonicParsing="false" onMouseClicked="#play_media_player" onMouseEntered="#play_media_player" text="Start" />
       <Button fx:id="stopButton" layoutX="486.0" layoutY="527.0" mnemonicParsing="false" onMouseClicked="#play_stop_player" onMouseEntered="#play_stop_player" text="Stop" />
       <Button fx:id="restartButton" layoutX="750.0" layoutY="527.0" mnemonicParsing="false" onMouseClicked="#play_restart_player" onMouseEntered="#play_restart_player" text="Restart" />
