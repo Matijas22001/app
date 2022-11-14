@@ -54,19 +54,12 @@ public class MediaPlayerController implements Initializable {
         try{
             media = new Media(getClass().getResource("/videos/Video1.mp4").toExternalForm());
             mediaPlayer = new MediaPlayer(media);
-            mediaPlayer.setOnError(() -> System.out.println("Error"));
+            mediaPlayer.setOnError(() -> {
+                System.out.println(mediaPlayer.getError().getMessage());
+                System.out.println(mediaPlayer.getError().getType());
+            });
             mediaPlayer.setOnPlaying(() -> System.out.println("Playing: " + media.getSource()));
             media_view.setMediaPlayer(mediaPlayer);
-            if(media_view == null) System.out.println("Media view error");
-            if(media_view != null) System.out.println("Media view ok");
-            //if(mediaPlayer.getError() != null) System.out.println("Err: "+mediaPlayer.getError().toString());
-            //if(mediaPlayer.errorProperty() != null) System.out.println("Err0: "+mediaPlayer.errorProperty().toString());
-            //if(mediaPlayer.statusProperty() != null) System.out.println("Status: "+mediaPlayer.statusProperty().toString());
-            //if(media.getSource() != null) System.out.println("Source: "+media.getSource().toString());
-            //if(media.durationProperty() != null) System.out.println("Dur1: "+media.durationProperty().toString());
-            //if(media.errorProperty()!= null) System.out.println("Err1: "+media.errorProperty().toString());
-            //if(media.getError() != null) System.out.println("Err2: "+media.getError().toString());
-            //if(media.getDuration()!= null) System.out.println("Dur2: "+media.getDuration().toString());
         }catch(Exception e){
             e.printStackTrace();
         }
