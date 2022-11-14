@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -51,11 +52,6 @@
       <ImageView fitHeight="544.0" fitWidth="64.0" layoutY="55.0" pickOnBounds="true">
          <image>
             <Image url="@../../../images/Subtract.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="54.0" fitWidth="811.0" layoutX="104.0" layoutY="420.0" pickOnBounds="true">
-         <image>
-            <Image url="@../../../images/button.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="52.78" pickOnBounds="true" preserveRatio="true" />
@@ -236,7 +232,7 @@
             <Image url="@../../../images/Group%2044.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="942.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="add_phase_button" fitHeight="31.0" fitWidth="31.0" layoutX="942.0" layoutY="427.0" onMouseEntered="#add_new_phase" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/Group%209619.png" />
          </image>
@@ -251,16 +247,6 @@
             <Font name="DejaVu Sans Bold" size="36.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="32.14" fitWidth="32.14" layoutX="814.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/Group%209630.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="27.86" fitWidth="26.79" layoutX="870.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/Group%209629.png" />
-         </image>
-      </ImageView>
       <TextField editable="false" focusTraversable="false" layoutX="104.0" layoutY="504.0" minHeight="30.0" mouseTransparent="true" prefWidth="300.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #FFFFFF;" text="Suma uderzeń">
          <font>
             <Font name="DejaVu Sans Bold" size="25.0" />
@@ -311,5 +297,6 @@
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </TextField>
+      <ListView fx:id="phase_list_view" focusTraversable="false" layoutX="114.0" layoutY="418.0" mouseTransparent="true" orientation="HORIZONTAL" prefHeight="50.0" prefWidth="803.0" style="-fx-background-color: #2DA7FF; -fx-text-inner-color: #FFFFFF; -fx-control-inner-background: #00000000; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;" />
    </children>
 </AnchorPane>

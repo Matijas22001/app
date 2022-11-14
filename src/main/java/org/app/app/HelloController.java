@@ -3,11 +3,15 @@ package org.app.app;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,14 +20,16 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.net.URL;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class HelloController {
+public class HelloController implements Initializable {
     @FXML private ImageView exitButton;
     @FXML private ImageView add_bar_btn;
     @FXML private ImageView add_hz_btn;
@@ -74,7 +80,33 @@ public class HelloController {
     private Integer current_hit_value = 2000;
     @FXML
     private ImageView go_to_media_player_view;
+    @FXML
+    private ListView phase_list_view;
+    @FXML
+    private ImageView add_phase_button;
 
+    ObservableList<PhaseItem> items;
+
+
+    public HelloController(){
+        items = FXCollections.observableArrayList();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        phase_list_view.setItems(items);
+        phase_list_view.setCellFactory(phase_list_view -> new PhaseListViewCell());
+
+    }
+    @FXML
+    private void add_new_phase(){
+        if(items.size()<5){
+            items.add(new PhaseItem(current_bar_value, current_hz_value, current_hit_value));
+            phase_list_view.setItems(items);
+        }else{
+            //add_phase_button.setVisible(false);
+        }
+    }
     @FXML
     private void add_bar_value(){
         iv_border_1.setVisible(true);

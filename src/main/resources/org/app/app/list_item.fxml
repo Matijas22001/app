@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="40.0" maxWidth="160.0" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #2DA7FF; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10; -fx-border-color: #121420;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="40.0" prefWidth="31.0">
+         <children>
+            <TextField fx:id="phase_value" focusTraversable="false" maxHeight="77.0" mouseTransparent="true" prefHeight="40.0" prefWidth="36.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #121420;" text="1">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <VBox layoutX="24.0" maxHeight="60.0" maxWidth="115.0" prefHeight="33.0" prefWidth="96.0">
+         <children>
+            <TextField fx:id="barHzValue" focusTraversable="false" maxHeight="20.0" mouseTransparent="true" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #121420;" text="2.0 Bar | 10 Hz">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="hitValue" focusTraversable="false" maxHeight="20.0" mouseTransparent="true" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: #00000000; -fx-text-inner-color: #121420;" text="2000">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="10.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="127.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Group%209629.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
