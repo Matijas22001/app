@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -52,12 +53,15 @@ public class MediaPlayerController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1){
         try{
-            media = new Media(getClass().getResource("/videos/Video1.mp4").toExternalForm());
+            media = new Media(getClass().getResource("/videos/Video1.mp4").toURI().toString());
             mediaPlayer = new MediaPlayer(media);
             mediaPlayer.setOnError(() -> {
                 System.out.println(mediaPlayer.getError().getMessage());
+                System.out.println(Arrays.toString(mediaPlayer.getError().getStackTrace()));
+                mediaPlayer.getError().printStackTrace();
                 System.out.println(mediaPlayer.getError().getType());
             });
+            System.out.println(media.getSource());
             mediaPlayer.setOnPlaying(() -> System.out.println("Playing: " + media.getSource()));
             media_view.setMediaPlayer(mediaPlayer);
         }catch(Exception e){
