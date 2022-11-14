@@ -51,7 +51,7 @@ public class MediaPlayerController implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1){
-        media = new Media(getClass().getResource("/videos/Video1.mp4").toExternalForm());
+        media = new Media(getClass().getResource("/videos/Video1conv.mp4").toExternalForm());
         mediaPlayer = null;
         try{
             mediaPlayer = new MediaPlayer(media);
