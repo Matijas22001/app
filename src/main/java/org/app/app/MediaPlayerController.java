@@ -55,11 +55,15 @@ public class MediaPlayerController implements Initializable {
             media = new Media(getClass().getResource("/videos/Video1.mp4").toExternalForm());
             mediaPlayer = new MediaPlayer(media);
             media_view.setMediaPlayer(mediaPlayer);
-            System.out.println(mediaPlayer.statusProperty().toString());
-            System.out.println(media.durationProperty().toString());
-            System.out.println(media.errorProperty().toString());
-            System.out.println(media.getError().toString());
-            System.out.println(media.getDuration().toString());
+            if(mediaPlayer.statusProperty() != null) System.out.println("Status: "+mediaPlayer.statusProperty().toString());
+            if(mediaPlayer.getError() != null) System.out.println("Err: "+mediaPlayer.getError().toString());
+            if(mediaPlayer.errorProperty() != null) System.out.println("Err0: "+mediaPlayer.errorProperty().toString());
+            if(mediaPlayer.statusProperty() != null) System.out.println("Status: "+mediaPlayer.statusProperty().toString());
+            if(media.getSource() != null) System.out.println("Source: "+media.getSource().toString());
+            if(media.durationProperty() != null) System.out.println("Dur1: "+media.durationProperty().toString());
+            if(media.errorProperty()!= null) System.out.println("Err1: "+media.errorProperty().toString());
+            if(media.getError() != null) System.out.println("Err2: "+media.getError().toString());
+            if(media.getDuration()!= null) System.out.println("Dur2: "+media.getDuration().toString());
         }catch(Exception e){
             e.printStackTrace();
         }
