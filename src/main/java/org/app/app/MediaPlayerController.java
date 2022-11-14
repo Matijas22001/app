@@ -53,7 +53,10 @@ public class MediaPlayerController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1){
         try{
-            media = new Media(getClass().getResource("/videos/Video1.mp4").toURI().toString());
+            //getClass().getResource("/videos/Video1.mp4"
+            File file = new File("/home/pi/CarePump/Video1.mp4");
+            final String MEDIA_URL = file.toURI().toString();
+            media = new Media(MEDIA_URL);
             mediaPlayer = new MediaPlayer(media);
             mediaPlayer.setOnError(() -> {
                 System.out.println(mediaPlayer.getError().getMessage());
