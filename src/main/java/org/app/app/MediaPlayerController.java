@@ -51,14 +51,18 @@ public class MediaPlayerController implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1){
-        media = new Media(getClass().getResource("/videos/VideoTest.mp4").toExternalForm());
-        mediaPlayer = null;
         try{
+            media = new Media(getClass().getResource("/videos/Video1.mp4").toExternalForm());
             mediaPlayer = new MediaPlayer(media);
+            media_view.setMediaPlayer(mediaPlayer);
+            System.out.println(mediaPlayer.statusProperty().toString());
+            System.out.println(media.durationProperty().toString());
+            System.out.println(media.errorProperty().toString());
+            System.out.println(media.getError().toString());
+            System.out.println(media.getDuration().toString());
         }catch(Exception e){
             e.printStackTrace();
         }
-        media_view.setMediaPlayer(mediaPlayer);
     }
     @FXML
     private void play_media_player(){
